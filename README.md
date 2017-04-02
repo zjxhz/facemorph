@@ -1,6 +1,7 @@
 # About
 This project demonstrates various face morphing technics using [dlib](dlib.net) and [OpenCV](opencv.org). Most of the ideas and code were originally from [LearnOpenCV](http://learnopencv.com). 
 
+
 # Prerequisite
 This is a C++ project, and CMake was used to build it. 
 
@@ -62,7 +63,9 @@ After this, cropped faces and landmarks will be generated under `/path/to/images
 This will generate and display the averaged face. The averaged face will be seamlessly cloned to the face of the first person. To change this, check function `faceSwap`. Also, currently, the averaged face is of size 200x200.
 
 # Open Issues
-* Generating face landmarks seem a bit too slow. This may be that dlib was not built using the AVX option.
+* Generating face landmarks seems a bit too slow. This may be that dlib was not built using the AVX option.
+* The output image are of size 200x200 px, and is not configurable, unless you change the code.
+* Errors are seen for some faces. This might be solved by adding margins to the cropped faces. Check [get_face_chip_details method](http://dlib.net/dlib/image_transforms/interpolation_abstract.h.html#get_face_chip_details) for more details.
 
 
 
